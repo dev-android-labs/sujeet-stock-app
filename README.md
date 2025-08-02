@@ -236,3 +236,20 @@ style G fill:#D1E8FF,stroke:#333,stroke-width:1px
 style E fill:#C1FFC1,stroke:#333,stroke-width:1px
 style F fill:#FFF5C1,stroke:#333,stroke-width:1px
 ```
+
+---
+
+## **9. App Screenshots**
+
+### Splash Screen
+<img src="https://github.com/dev-android-labs/sujeet-stock-app/blob/development/screenshots/splash_screen.png" alt="Splash Screen" width="300" height="600">
+
+### Holdings Screen (Collapsed Summary)
+<img src="https://raw.githubusercontent.com/dev-android-labs/sujeet-stock-app/development/screenshots/holding_collapse.png" alt="Holdings Screen" width="300" height="600">)
+
+### Holdings Screen (Expanded Summary)
+<img src="https://github.com/dev-android-labs/sujeet-stock-app/blob/development/screenshots/holding_expanded.png" alt="Holdings Screen Expanded" width="300" height="600">
+
+
+---
+
