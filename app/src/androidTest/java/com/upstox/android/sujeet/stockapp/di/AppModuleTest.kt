@@ -7,6 +7,7 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.upstox.android.sujeet.stockapp.data.local.dao.HoldingsDao
 import com.upstox.android.sujeet.stockapp.data.remote.HoldingsApi
 import com.upstox.android.sujeet.stockapp.domain.repository.HoldingsRepository
+import com.upstox.android.sujeet.stockapp.utils.API_BASE_URL
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import kotlinx.coroutines.runBlocking
@@ -43,7 +44,7 @@ class AppModuleTest {
     fun verifyRetrofitBaseUrl() {
         hiltRule.inject()
         val baseUrl = retrofit.baseUrl().toString()
-        assert(baseUrl.contains("api.mockbin.io"))
+        assert(baseUrl.contains(API_BASE_URL))
     }
 
     @Test
