@@ -1,6 +1,5 @@
 package com.upstox.android.sujeet.stockapp.data.repository
 
-import android.util.Log
 import com.upstox.android.sujeet.stockapp.data.local.dao.HoldingsDao
 import com.upstox.android.sujeet.stockapp.data.local.entity.toEntity
 import com.upstox.android.sujeet.stockapp.data.remote.HoldingsApi
@@ -31,9 +30,7 @@ class HoldingsRepositoryImpl(
             dao.insertAll(holdings?.map { it.toEntity() } ?: emptyList())
             Result.Success(holdings)
         } catch (e: Exception) {
-            Log.e(TAG, "fetchHoldings: ${e.printStackTrace()}")
             val cached = dao.getAll().map { it.toDomain() }
-            Log.d(TAG, "fetchHoldings: ${cached.toString()}")
             if (cached.isNotEmpty()) Result.Success(cached)
             else Result.Error(e)
         } as Result<List<Holding>>

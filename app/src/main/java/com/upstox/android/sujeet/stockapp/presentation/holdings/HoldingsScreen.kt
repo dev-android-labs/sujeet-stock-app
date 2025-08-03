@@ -62,7 +62,7 @@ fun HoldingsScreen(viewModel: HoldingsViewModel = hiltViewModel()) {
             containerColor = Color.White,
             contentColor = MaterialTheme.colorScheme.primary,
             indicator = { tabPositions ->
-                TabRowDefaults.Indicator(
+                TabRowDefaults.SecondaryIndicator(
                     Modifier
                         .tabIndicatorOffset(tabPositions[selectedTab])
                         .height(3.dp),
