@@ -4,6 +4,7 @@ package com.upstox.android.sujeet.stockapp.presentation.funds
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.assertIsDisplayed
+import androidx.compose.ui.test.junit4.createComposeRule
 import com.upstox.android.sujeet.stockapp.MainActivity
 import org.junit.Rule
 import org.junit.Test
@@ -14,7 +15,7 @@ import org.junit.Test
 class FundScreenTest {
 
     @get:Rule
-    val composeTestRule = createAndroidComposeRule<MainActivity>()
+    val composeTestRule = createComposeRule()
 
     @Test
     fun fundScreen_showsComingSoonText() {

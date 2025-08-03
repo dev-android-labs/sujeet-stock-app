@@ -1,5 +1,3 @@
-import org.gradle.internal.impldep.org.junit.runner.Request.runner
-
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
@@ -12,6 +10,15 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        create("release") {
+            storeFile =
+                file("keys\\sign.jks")
+            storePassword = "UpStock@123"
+            keyAlias = "key0"
+            keyPassword = "UpStock@123"
+        }
+    }
     namespace = "com.upstox.android.sujeet.stockapp"
     compileSdk = 36
 
@@ -19,10 +26,11 @@ android {
         applicationId = "com.upstox.android.sujeet.stockapp"
         minSdk = 24
         targetSdk = 36
-        versionCode = 3
-        versionName = "1.0.2"
+        versionCode = 5
+        versionName = "1.0.3"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig = signingConfigs.getByName("release")
     }
 
     buildTypes {
